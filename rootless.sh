@@ -241,8 +241,11 @@ do_install() {
 	(
 		mkdir -p "$BIN"
 		cd "$BIN"
+		pwd
 		tar zxf "$tmp/docker.tgz" --strip-components=1
+		ls
 		tar zxf "$tmp/rootless.tgz" --strip-components=1
+		ls
 	)
 
 	exec_setuptool "$@"
