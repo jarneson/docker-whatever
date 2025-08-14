@@ -1,0 +1,9 @@
+# Use a base image
+FROM ubuntu:latest
+
+# Install dependencies (example: update apt and install curl)
+RUN apt-get update && \
+    apt-get install -y curl
+
+# Define the command to run when the container starts
+CMD ["echo", "Hello from Docker!"]
